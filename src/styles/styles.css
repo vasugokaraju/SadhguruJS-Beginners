@@ -1,0 +1,34 @@
+body{
+    line-height: 2em;
+}
+.mainStyle{
+    color:blue;
+}
+
+.pageTitle{
+    font-size: 40px;
+    text-align: center;
+}
+
+.pageCaption{
+    font-size: 14px;
+    text-align: center;
+}
+
+.logoImage{
+    width: 75px;
+    height: 50px;
+    background-image: url(../assets/imgs/Sadhguru01.png);
+}
+
+div#divWorkingSamples>ol>li{
+    font-weight: bold;
+}
+
+div#divWorkingSamples ul>li{
+    font-weight: normal;
+}
+
+.sample1Style{
+    color:red;
+}
