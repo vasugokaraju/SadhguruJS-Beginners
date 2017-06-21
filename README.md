@@ -30,9 +30,6 @@ This project is to provide information about inner mechanism of Angular 2 app AN
         <li>Install webpack-dev-server v2.4.2 or above, if not done already<br/>
             <code>npm install webpack-dev-server -g</code><br/><br/>
         </li>
-        <li>Install Webpack-dev-server if not done already<br/>
-            <code>npm install webpack-dev-server -g</code><br/><br/>
-        </li>
         <li>Download app code from git<br/>
             <code>git clone https://github.com/vasugokaraju/SadhguruJS-Beginners.git</code><br/><br/>
         </li>
