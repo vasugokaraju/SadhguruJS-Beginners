@@ -304,16 +304,16 @@ It is important to understand how Webpack re-arranges things as it parses and bu
 There is a crucial step when packaging files into /dist folder.  By default webpack won't copy the .html and .css files that are associated with controllers into /dist folder.  To address this issue we could use CopyWebpackPlugin in webpack.js file as shown below.
 	<br/>
 	<br/>
-        <code>var CopyWebpackPlugin = require('copy-webpack-plugin');</code><br/><br/>
-	...<br/><br/>
-	<code>
+        <code>var CopyWebpackPlugin = require('copy-webpack-plugin');</code><br/>
+	...<br/>
+	<pre>
 		plugins:[
 			new CopyWebpackPlugin([
 				{from: 'app/**/*.html', to:'www/'},
 				{from: 'app/**/*.css', to:'www/'}
 			])
 		]
-	</code>
+	</pre>
 
 <br/><br/>
 		The above configuration copies all the .html and .css files from all the folders under 'app'.  The same directory structure will be created under /www at the destination.
