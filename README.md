@@ -301,7 +301,9 @@ It is important to understand how Webpack re-arranges things as it parses and bu
 
 <div id="divProductionDeployment">
 <h3>Production Deployment</h3>
-Well, looks like you are one of those few survivors <i>(unless you simply scrolled down)</i>.  I am also new to this spaghetti party.  If you find better way of doing Webpack and Angular 2, please share.
+There is a crucial step when packaging files into /dist folder.  By default webpack won't copy the .html and .css files that are associated with controllers into /dist folder.  To address this issue we could use CopyWebpackPlugin in webpack.js file as shown below.
+    
+    
 <hr/>
 </div>
 
