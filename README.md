@@ -316,7 +316,7 @@ plugins:[
 ]
 </pre>
 
-<br/><br/>
+<br/>
 		The above configuration copies all the .html and .css files from all the folders under 'app'.  The same directory structure will be created under /www at the destination.
 		<br/><br/>
 		Once the /Dist folder is created, it can be copied to the production environment where a NodeJS webserver could be used to launch the website.
