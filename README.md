@@ -186,55 +186,23 @@ styleUrls: [ '<mark style="color:red;font-weight: bold;">src/app/app.component.c
 templateUrl: '<mark style="color:red;font-weight: bold;">/src/app/app.component.html'
 })
 </pre>
-
-	<h4>Webpack auto loader::</h4>
-	<div>
-	Webpack-dev-server comes with a nice feature to reload the browser as you make changes to your code on the server.  As per the <a href="https://webpack.github.io/docs/webpack-dev-server.html" target="_blank">documentation</a> this feature can be enabled by adding <code>--hot</code> to command line as shown below <br/><br/>
-	<code>webpack-dev-server --host 0.0.0.0 --port 8082 --inline --progress --hot </code>
-	<br/><br/>
-	But there seems to be an issue as it was not working the way the documentation suggests.  Thanks to the community <a href="https://github.com/webpack/webpack-dev-server/issues/206" target="_blank">(daniel-erickson)</a> for the following workaround.
-	<br/>
-	<ol>
-		<li>Remove <code>--hot</code> from command-line.<br/></li>
-		<li>Add <code>new webpack.HotModuleReplacementPlugin()</code> in <code>plugins</code> section of <code>webpack.config.js</code> file.  You can see the webpack config file of this project for reference.</li>
-	</ol>
-
-	</div>
-
-</div>
-
-<hr/>
-</div>
-
-
-<div id="divProductionDeployment">
-    <h3>Production Deployment</h3>
-
-	<div>
-        There is a crucial step when packaging files into /dist folder.  By default webpack won't copy the .html and .css files that are associated with controllers into /dist folder.  To address this issue we could use CopyWebpackPlugin in webpack.js file as shown below.
-		
-<br/>		
-		<code>
-		var CopyWebpackPlugin = require('copy-webpack-plugin');
-
-		...
-		
-		plugins:[
-			new CopyWebpackPlugin([
-				{from: 'app/**/*.html', to:'www/'},
-				{from: 'app/**/*.css', to:'www/'}
-			])
-		]
-		</code>
+<h4>Webpack auto loader::</h4>
+<div>
+Webpack-dev-server comes with a nice feature to reload the browser as you make changes to your code on the server.  As per the <a href="https://webpack.github.io/docs/webpack-dev-server.html" target="_blank">documentation</a> this feature can be enabled by adding <code>--hot</code> to command line as shown below <br/><br/>
+<code>webpack-dev-server --host 0.0.0.0 --port 8082 --inline --progress --hot </code>
+<br/><br/>
+But there seems to be an issue as it was not working the way the documentation suggests.  Thanks to the community <a href="https://github.com/webpack/webpack-dev-server/issues/206" target="_blank">(daniel-erickson)</a> for the following workaround.
 <br/>
-		The above configuration copies all the .html and .css files from all the folders under 'app'.  The same directory structure will be created under /www at the destination.
-		<br/>
-		Once the /Dist folder is created, it can be copied to the production environment where a NodeJS webserver could be used to launch the website.
+<ol>
+    <li>Remove <code>--hot</code> from command-line.<br/></li>
+    <li>Add <code>new webpack.HotModuleReplacementPlugin()</code> in <code>plugins</code> section of <code>webpack.config.js</code> file.  You can see the webpack config file of this project for reference.</li>
+</ol>
+
+</div>
 
 </div>
 <hr/>
 </div>
-
 
 <div id="divWorkingSamples">
 <h3>Working Samples</h3>
