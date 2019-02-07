@@ -208,7 +208,9 @@ But there seems to be an issue as it was not working the way the documentation s
 <div id="divProductionDeployment">
     <h3>Production Deployment</h3>
 
+	<div>
         There is a crucial step when packaging files into /dist folder.  By default webpack won't copy the .html and .css files that are associated with controllers into /dist folder.  To address this issue we could use CopyWebpackPlugin in webpack.js file as shown below.
+		</div>
 <br/>		
 		<code>
 		var CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -324,7 +326,6 @@ It is important to understand how Webpack re-arranges things as it parses and bu
 </ul>
 <hr/>
 </div>
-
 
 <div id="divConclusion">
 <h3>Conclusion</h3>
