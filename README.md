@@ -205,14 +205,15 @@ But there seems to be an issue as it was not working the way the documentation s
 </div>
 
 
-
 <div id="divProductionDeployment">
     <h3>Production Deployment</h3>
-    <div>
+
         There is a crucial step when packaging files into /dist folder.  By default webpack won't copy the .html and .css files that are associated with controllers into /dist folder.  To address this issue we could use CopyWebpackPlugin in webpack.js file as shown below.
 <br/>		
 		<code>
 		var CopyWebpackPlugin = require('copy-webpack-plugin');
+
+		...
 		
 		plugins:[
 			new CopyWebpackPlugin([
@@ -225,10 +226,9 @@ But there seems to be an issue as it was not working the way the documentation s
 		The above configuration copies all the .html and .css files from all the folders under 'app'.  The same directory structure will be created under /www at the destination.
 		<br/>
 		Once the /Dist folder is created, it can be copied to the production environment where a NodeJS webserver could be used to launch the website.
-	</div>
+
 <hr/>
 </div>
-
 
 <div id="divWorkingSamples">
 <h3>Working Samples</h3>
